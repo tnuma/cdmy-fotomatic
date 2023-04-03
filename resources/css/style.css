@@ -41,6 +41,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  height: 5.3125rem;
 }
 
 header .content {
@@ -50,11 +51,24 @@ header .content {
 }
 
 header .logo {
-  flex: 1;
+  color: #4A4A4A;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1.5rem;
+  flex: 1; 
 }
 
 header nav ul {
   display: flex;
+}
+
+/* added this section to make instagram logo and text align vertically */
+.desktop ul li:last-child a {
+  display: flex;
+  align-items: center;
+}
+.tablet ul li:nth-child(3) a {
+  display: flex;
+  align-items: center;
 }
 
 nav li {
@@ -65,6 +79,7 @@ nav a {
   vertical-align: bottom;
   line-height: 1.6;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
   color: #4a4a4a;
 }
 
@@ -77,8 +92,39 @@ header .mobile {
   display: none;
 }
 
+header .tablet {
+  display: none;
+}
+
+header .button {
+  padding: .1875rem .5rem;
+  background-color: #9dc20b;
+  line-height: 1.6;
+  color: white;
+}
+
 @media only screen and (max-width: 760px) {
   header .desktop {
+    display: none;
+  }
+  header .logo {
+    display: block;
+  }
+  header .tablet {
+    display: block;
+  }
+  nav li {
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    height: 3rem;
+  }
+  
+  header .desktop,
+  header .tablet {
     display: none;
   }
 
@@ -98,15 +144,14 @@ header .mobile {
     width: 100%;
   }
 
+  /* added this code to set icons appear middle in header */
+  header .mobile li a {
+    display: flex;
+    align-items: center;
+  } 
+
   header .mobile li {
     padding: 0;
-  }
-
-  header .mobile .button {
-    padding: .1875rem .5rem;
-    background-color: #9dc20b;
-    line-height: 1.6;
-    color: white;
   }
 }
 
