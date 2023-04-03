@@ -469,12 +469,15 @@ header .button {
 
 footer {
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
 }
 
 footer .content {
+  height: 3.875rem;
+  padding: 0 2rem;
   color: white;
   display: flex;
+  align-items: center;
   font-size: .75rem;
 }
 
